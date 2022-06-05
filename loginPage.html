@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    <title>Dynamic Webpage</title>
+    <style>
+        .container {
+            background-color: rgb(25, 25, 111);
+
+            text-align: center;
+        }
+
+        #login {
+            color: rgb(18, 11, 11);
+
+        }
+
+        #footer {
+            background-color: rgb(54, 54, 101);
+            text-align: center;
+        }
+
+        a:hover {
+            color: red;
+        }
+    </style>
+</head>
+<div class="container">
+    <select>
+        <option>English(UK)</option>
+        <option>English(USA)</option>
+        <option>Telugu</option>
+        <option>Hindi</option>
+        <option>Kannada</option>
+    </select>
+    <header>
+        <div id="login">
+            <h1>facebook</h1>
+            <p id="display"></p>
+        </div>
+    </header>
+    <div id="input">
+        <input type="text" id="username" placeholder="Phome number or email"><br><br>
+
+        <input type="password" id="password" placeholder="Password"><br><br>
+        <button id="loginBUT">login</button>
+    </div>
+</div>
+<footer id="footer">
+    <div>
+        Don't have an account? <a href="signUp.html">Sign up</a>
+    </div>
+</footer>
+<script>
+    var username = document.getElementById("username").innerText;
+    var password = document.getElementById("password").innerText;
+    document.getElementById("loginBUT").addEventListener("submit", displayMsg);
+    function displayMsg() {
+        if (username == null || password == null) {
+            document.getElementById("display").innerHTML = "Provide username or passwprd";
+        }
+    }
+</script>
+</body>
+
+</html>

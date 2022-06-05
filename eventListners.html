@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <h1>JavaScript event Listners</h1>
+    <p>
+        This is a demo page to display the current time and date
+    </p>
+    <button id="display">click</button>
+    <p id="displayHere"></p>
+    <script>
+        document.getElementById("display").addEventListener("click", displayDate);
+        function displayDate() {
+            document.getElementById("displayHere").innerHTML = Date();
+        }
+    </script>
+</body>
+
+</html>
